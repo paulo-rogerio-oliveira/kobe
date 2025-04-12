@@ -1,0 +1,6 @@
+Requirement already satisfied: kedro-datasets[pickle-pickleDataset] in c:\users\paulo.rogerio\appdata\local\anaconda3\lib\site-packages (3.0.0)
+Requirement already satisfied: kedro>=0.19 in c:\users\paulo.rogerio\appdata\local\anaconda3\lib\site-packages (from kedro-datasets[pickle-pickleDataset]) (0.19.12)
+Requirement already satisfied: lazy-loader in c:\users\paulo.rogerio\appdata\local\anaconda3\lib\site-packages (from kedro-datasets[pickle-pickleDataset]) (0.4)
+Requirement already satisfied: compress-pickle~=2.1.0 in c:\users\paulo.rogerio\appdata\local\anaconda3\lib\site-packages (from compress-pickle[lz4]~=2.1.0; extra == "pickle-pickledataset"->kedro-datasets[pickle-pickleDataset]) (2.1.0)
+Requirement already satisfied: lz4 in c:\users\paulo.rogerio\appdata\local\anaconda3\lib\site-packages (from compress-pickle[lz4]~=2.1.0; extra == "pickle-pickledataset"->kedro-datasets[pickle-pickleDataset]) (4.3.2)
+Requirement already satisfied: packaging in c:\users\paulo.rogerio\appdata\local\anaconda3\lib\site-packages (from lazy-loader->kedro-datasets[pickle-pickleDataset]) (24.2)

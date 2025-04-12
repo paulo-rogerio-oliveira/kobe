@@ -1,0 +1,14 @@
+ipython>=8.10
+jupyterlab>=3.0
+kedro-viz>=6.7.0
+kedro~=0.19.11
+kedro-datasets[pandas-csvdataset, pandas-exceldataset, pandas-parquetdataset, plotly-plotlydataset, plotly-jsondataset, matplotlib-matplotlibwriter]>=3.0
+notebook
+pyarrow
+mlflow<2.13
+pycaret[models,mlops]
+scikit-optimize
+seaborn~=0.12.1
+streamlit
+
+

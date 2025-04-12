@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/paulo.rogerio/College_4/trabalho/trabalho/notebooks/mlruns/0/96368df7e1224fb18367bb3f096118c3/artifacts
+end_time: 1744079272958
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 96368df7e1224fb18367bb3f096118c3
+run_name: Treinamento
+run_uuid: 96368df7e1224fb18367bb3f096118c3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744079270550
+status: 4
+tags: []
+user_id: paulo.rogerio

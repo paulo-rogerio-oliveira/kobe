@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/paulo.rogerio/College_4/trabalho/trabalho/mlflow_runs/135378862602316102/a798d7f32307497d8ed97b461a44ffed/artifacts
+end_time: 1744025770544
+entry_point_name: ''
+experiment_id: '135378862602316102'
+lifecycle_stage: active
+run_id: a798d7f32307497d8ed97b461a44ffed
+run_name: __default__
+run_uuid: a798d7f32307497d8ed97b461a44ffed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744025767860
+status: 3
+tags: []
+user_id: paulo.rogerio

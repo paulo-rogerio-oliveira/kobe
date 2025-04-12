@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/paulo.rogerio/College_4/trabalho/trabalho/src/trabalho/dashboard/mlruns/0/009e79b3bbb94fd7acd403a9f2dd8d15/artifacts
+end_time: 1744324482968
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 009e79b3bbb94fd7acd403a9f2dd8d15
+run_name: PipelineAplicacao
+run_uuid: 009e79b3bbb94fd7acd403a9f2dd8d15
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744324482886
+status: 3
+tags: []
+user_id: paulo.rogerio

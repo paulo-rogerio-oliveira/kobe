@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/paulo.rogerio/College_4/trabalho/trabalho/notebooks/mlruns/0/6d3a5940b1f74c0f8d5406723b1c43ce/artifacts
+end_time: 1744159193462
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6d3a5940b1f74c0f8d5406723b1c43ce
+run_name: PreparacaoDados
+run_uuid: 6d3a5940b1f74c0f8d5406723b1c43ce
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744159193433
+status: 4
+tags: []
+user_id: paulo.rogerio
