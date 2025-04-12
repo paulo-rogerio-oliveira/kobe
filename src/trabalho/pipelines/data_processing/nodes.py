@@ -5,7 +5,7 @@ from kedro.framework.session import KedroSession
 import pandas as pd
 import mlflow
 from sklearn.model_selection import train_test_split
-from pycaret.classification import setup, create_model, predict_model, save_model, compare_models
+from pycaret.classification import setup, create_model, predict_model, tune_model
 from sklearn.metrics import log_loss, f1_score
 import os
 
@@ -81,7 +81,10 @@ def Treinamento(
 
         # Treinamento
         lr = create_model("lr")
+        #lr = tune_model(lr)
+
         dt = create_model("dt")
+        #dt = tune_model(dt)
         
         # 3. Avaliação na base de teste
         # Previsões
@@ -117,6 +120,7 @@ def Treinamento(
             # empataram em logloss → escolher dt se F1 maior, senão lr
             best_model, best_name = (dt, "dt") if f1_dt > 0 else (lr, "lr")
         
+        best_model=tune_model(best_model)
         mlflow.log_param("modelo_escolhido", best_name)
         mlflow.log_artifact(os.path.abspath("./data/06_models/modelo_final.pickle"))
           # Log the sklearn model and register as version 1

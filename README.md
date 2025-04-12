@@ -1,4 +1,36 @@
-# trabalho
+# Trabalho de Engenharia de Machine Learning 
+## Resposta questão 2
+![diagrama](image.png)
+
+## Resposta questão 3
+Rastreamento de experimentos: MLflow registra experimentos, métricas e versões, enquanto PyCaret simplifica o log automático dentro de seu fluxo de treinamento.
+
+Funções de treinamento: Scikit‑Learn fornece os algoritmos e estruturas básicas; PyCaret abstrai o processo para facilitar a comparação e otimização dos modelos.
+
+Monitoramento da saúde do modelo: Streamlit cria dashboards interativos para visualização em tempo real; MLflow fornece logs e métricas históricas para análise.
+
+Atualização de modelo: Uma abordagem integrada (com MLflow e pipelines de retreinamento via PyCaret/Scikit‑Learn) permite retreinamentos reativos e programados, assegurando que o modelo se mantenha aderente aos dados atuais.
+
+Provisionamento (Deployment): MLflow formata e empacota os modelos para deployment; Streamlit pode servir como interface interativa para demonstração e monitoramento, e os modelos do Scikit‑Learn podem ser integrados facilmente em APIs ou serviços de produção
+
+## Resposta questão 4
+Artefato	                        
+
+/data/raw/dataset_kobe_dev      	Arquivo Parquet com registros brutos de arremessos “dev”. Contém todas as colunas       originais (posicionamento, tempo, informações de jogo, variáveis de contexto etc.).
+
+/data/raw/dataset_kobe_prod     	Arquivo Parquet com registros brutos de arremessos “prod”. Mesma estrutura do dataset dev, porém coletado em outro período ou ambiente.
+
+
+data_filtered	                    Arquivo Parquet contendo apenas as colunas selecionadas (lat, long, minutes_remaining, period, playoffs, shot_distance, shot_made_flag) e sem linhas faltantes.
+
+base_train      	                Parquet com 80% dos registros de data_filtered, estratificados pela coluna shot_made_flag. Usado para ajuste (fit) dos modelos.
+
+base_test       	                Parquet com 20% dos registros de data_filtered, estratificados pela coluna shot_made_flag. Usado para avaliação final dos modelos.
+
+modelo_final.pickle                 Pickle contendo o melhor modelo que foi escolhido entre um decision tree e um logistic 
+regression
+
+resultado_pipeline                  Parquet com o resultado da inferência na base de produção
 
 [![Powered by Kedro](https://img.shields.io/badge/powered_by-kedro-ffc900?logo=kedro)](https://kedro.org)
 
