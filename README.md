@@ -14,23 +14,54 @@ Atualização de modelo: Uma abordagem integrada (com MLflow e pipelines de retr
 Provisionamento (Deployment): MLflow formata e empacota os modelos para deployment; Streamlit pode servir como interface interativa para demonstração e monitoramento, e os modelos do Scikit‑Learn podem ser integrados facilmente em APIs ou serviços de produção
 
 ## Resposta questão 4
-Artefato	                        
 
-/data/raw/dataset_kobe_dev      	Arquivo Parquet com registros brutos de arremessos “dev”. Contém todas as colunas       originais (posicionamento, tempo, informações de jogo, variáveis de contexto etc.).
+Artefatos	                        
 
-/data/raw/dataset_kobe_prod     	Arquivo Parquet com registros brutos de arremessos “prod”. Mesma estrutura do dataset dev, porém coletado em outro período ou ambiente.
+/data/raw/dataset_kobe_dev      	
+Arquivo Parquet com registros brutos de arremessos “dev”. Contém todas as colunas       originais (posicionamento, tempo, informações de jogo, variáveis de contexto etc.).
 
+/data/raw/dataset_kobe_prod     	
+Arquivo Parquet com registros brutos de arremessos “prod”. Mesma estrutura do dataset dev, porém coletado em outro período ou ambiente.
 
-data_filtered	                    Arquivo Parquet contendo apenas as colunas selecionadas (lat, long, minutes_remaining, period, playoffs, shot_distance, shot_made_flag) e sem linhas faltantes.
+data_filtered	                    
+Arquivo Parquet contendo apenas as colunas selecionadas (lat, long, minutes_remaining, period, playoffs, shot_distance, shot_made_flag) e sem linhas faltantes.
 
-base_train      	                Parquet com 80% dos registros de data_filtered, estratificados pela coluna shot_made_flag. Usado para ajuste (fit) dos modelos.
+base_train      	                
+Parquet com 80% dos registros de data_filtered, estratificados pela coluna shot_made_flag. Usado para ajuste (fit) dos modelos.
 
-base_test       	                Parquet com 20% dos registros de data_filtered, estratificados pela coluna shot_made_flag. Usado para avaliação final dos modelos.
+base_test       	                
+Parquet com 20% dos registros de data_filtered, estratificados pela coluna shot_made_flag. Usado para avaliação final dos modelos.
 
-modelo_final.pickle                 Pickle contendo o melhor modelo que foi escolhido entre um decision tree e um logistic 
+modelo_final.pickle                 
+Pickle contendo o melhor modelo que foi escolhido entre um decision tree e um logistic 
 regression
 
-resultado_pipeline                  Parquet com o resultado da inferência na base de produção
+resultado_pipeline                  
+Parquet com o resultado da inferência na base de produção
+
+## Resposta questão 6 alternativa e
+O melhor modelo foi escolhido com base na performance da função de custo log loss 
+
+## Resposta questão 7 alternativa a
+O modelo não foi aderente a base de produção. Ele foi treinado com uma seleção das features que podem não representar
+o evento. A métrica score caiu muito, por consequência o modelo teve dificuldade em predizer a classe 1 - made shot
+A distribuição da base de teste as classes estão quase iguais e na produção  está praticamente 65/35 que pode ser
+um sinal de que os dados estão sofrendo label drift
+
+## Resposta questão 7 alternativa b
+Acompanhamento de métricas periódicas  de log loss, F1, acurácia
+Monitorar a distribuição das features em tempo real vs baseline
+
+## Resposta questão 7 alternativa c
+
+Reativa
+Análise das métricas em produção pioram (log loss, F1) ou há drift detectado.
+Coletar dados recentes com rótulos, reexecuta pipeline e promove novo modelo.
+
+Preditiva (Programada)
+Análise (mensal, trimestral) ou a cada X novos registros.
+refaz todo processo: processamento, treino, avaliação e promoção.
+
 
 [![Powered by Kedro](https://img.shields.io/badge/powered_by-kedro-ffc900?logo=kedro)](https://kedro.org)
 
