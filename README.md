@@ -40,7 +40,16 @@ regression
 
 resultado_pipeline                  
 Parquet com o resultado da inferência na base de produção
-
+## Resposta questão 5 alternativa b
+A dimensão do dataset filtrado é de 20285 linhas, mais de 4000 linhas foram removidas
+A escolha de treino e teste afetam o resultado nos quisitos de representatividade, generalização, variabilidade
+Algumas estratégias podem ser adotadas para minimizar os viéses de dados:
+    Amostra estratificada 
+    Validação cruzada
+    Análise exploratória
+    Balanceamento de classe
+    Monitoramento contínuo
+    
 ## Resposta questão 6 alternativa e
 O melhor modelo foi escolhido com base na performance da função de custo log loss 
 
