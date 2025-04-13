@@ -1,5 +1,6 @@
 # Trabalho de Engenharia de Machine Learning 
 ## Esse trabaho foi desenvolvido em um enviroment do python 3.11
+repositório -> https://github.com/paulo-rogerio-oliveira/kobe
 ## Resposta questão 2
 ![diagrama](image.png)
 
