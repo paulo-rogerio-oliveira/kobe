@@ -1,4 +1,5 @@
 # Trabalho de Engenharia de Machine Learning 
+## Esse trabaho foi desenvolvido em um enviroment do python 3.11
 ## Resposta questão 2
 ![diagrama](image.png)
 
@@ -42,9 +43,13 @@ Parquet com o resultado da inferência na base de produção
 ## Resposta questão 6 alternativa e
 O melhor modelo foi escolhido com base na performance da função de custo log loss 
 
+## Resposta questão 7
+Foi demonstrado um endpoint de predição no notebook mlflow_serv servido pelo comando
+mlflow models serve -m models:/trained_model/latest --env-manager=local --port 5001 --no-conda   
+
 ## Resposta questão 7 alternativa a
 O modelo não foi aderente a base de produção. Ele foi treinado com uma seleção das features que podem não representar
-o evento. A métrica score caiu muito, por consequência o modelo teve dificuldade em predizer a classe 1 - made shot
+o evento. A métrica score caiu muito, por consequência o modelo teve dificuldade em predizer a classe 1 - made shot.
 A distribuição da base de teste as classes estão quase iguais e na produção  está praticamente 65/35 que pode ser
 um sinal de que os dados estão sofrendo label drift
 
